@@ -22,11 +22,15 @@
 /*  import variable */
 @import "less/_variable.less";
 
+/* use Noto Sans CJK JP */
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
 /* Common */
 
 html,
 body {
-    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 200;
     color: @text;
     background-color: @background;
 }
@@ -46,6 +50,7 @@ h1,h2,h3,h4,h5,h6 {
     a,a:hover,a:visited {
         color: @text-header;
         text-decoration: none;
+        font-weight: 500;
     }
 }
 
@@ -53,6 +58,10 @@ a.keyword {
     text-decoration: none;
     border-bottom: 1px dotted @border;
     color: @text;
+}
+
+b, strong {
+    font-weight: 500;
 }
 
 /* Buttons */
@@ -177,6 +186,7 @@ a.keyword {
     margin: 0;
     a {
         color: @text;
+        text-decoration: none;
     }
 }
 
@@ -235,7 +245,7 @@ a.keyword {
 /* 日付 */
 
 .date {
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 10px;
 
     a {
@@ -287,6 +297,7 @@ a.keyword {
     h1,h2,h3,h4,h5,h6 {
         margin: 1.3em 0 0.8em 0;
         line-height: 1.5;
+        font-weight: 500;
     }
 
     h1 {
@@ -348,6 +359,7 @@ a.keyword {
         margin: 0 0 10px;
         padding: 20px;
         white-space: pre;
+        font-size: 80%;
     }
 
     pre>code {
@@ -473,7 +485,7 @@ a.keyword {
 }
 
 .hatena-module-title {
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 15px;
     font-size: 120%;
     a {
@@ -497,9 +509,12 @@ a.keyword {
 
     .id {
         display: block;
-        font-weight: bold;
+        font-weight: 500;
         font-size: 110%;
         margin-bottom: 5px;
+        a {
+            text-decoration: none;
+        }
     }
 
     .profile-description {
@@ -530,6 +545,10 @@ a.keyword {
         }
     }
 
+}
+
+.urllist-date-link {
+    font-weight: 500;
 }
 
 /* Search module */
@@ -672,3 +691,4 @@ a.keyword {
 
 /*  import media queries */
 @import "less/_media-queries.less";
+
